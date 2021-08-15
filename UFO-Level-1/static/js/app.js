@@ -46,20 +46,18 @@ function filterData()
 {
     // Prevent the page from refreshing
     d3.event.preventDefault();
+
     let date = datetime.property("value")
     let city = citySelect.property("value")
     let state = stateSelect.property("value")
     let country = countrySelect.property("value")
     let shape = shapeSelect.property("value")
 
-    console.log(city);
-
     filteredData = tableData.filter( row => row.datetime === date && 
                                             row.city === city &&
                                             row.state === state &&
                                             row.country === country &&
                                             row.shape === shape)
-    console.log(filteredData);
 
     let tbody = d3.select('tbody')
     tbody.html('&nbsp;')
