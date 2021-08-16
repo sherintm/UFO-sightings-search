@@ -24,12 +24,9 @@ function filterData()
     tbody.html('&nbsp;')
     filteredData.forEach(row => {
         tbody.append('tr')
-        tbody.append('td').text(row.datetime)
-        tbody.append('td').text(row.city)
-        tbody.append('td').text(row.state)
-        tbody.append('td').text(row.country)
-        tbody.append('td').text(row.shape)
-        tbody.append('td').text(row.durationMinutes)
-        tbody.append('td').text(row.comments)
+        Object.values(row).forEach((value) =>
+        {
+            tbody.append('td').text(value)
+        })
     });
 }

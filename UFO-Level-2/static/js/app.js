@@ -67,7 +67,7 @@ function filterData()
     tbody.html('&nbsp;')
     filteredData.forEach(row => {
         tbody.append('tr')
-        Object.entries(row).forEach(([key, value]) =>
+        Object.values(row).forEach((value) =>
         {
             tbody.append('td').text(value)
         })
