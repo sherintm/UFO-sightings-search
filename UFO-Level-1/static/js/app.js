@@ -30,3 +30,18 @@ function filterData()
         })
     });
 }
+
+function init()
+{
+    let tbody = d3.select('tbody')
+    tbody.html('&nbsp;')
+    tableData.forEach(row => {
+        tbody.append('tr')
+        Object.values(row).forEach((value) =>
+        {
+            tbody.append('td').text(value)
+        })
+    });    
+}
+
+init();

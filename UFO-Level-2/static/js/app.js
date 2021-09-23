@@ -56,11 +56,15 @@ function filterData()
     let state = stateSelect.property("value")
     let country = countrySelect.property("value")
     let shape = shapeSelect.property("value")
-
-    filteredData = tableData.filter( row => row.datetime === date && 
-                                            row.city === city &&
-                                            row.state === state &&
-                                            row.country === country &&
+    console.log(date);
+    console.log(city);
+    console.log(state);
+    console.log(country);
+    console.log(shape);
+    filteredData = tableData.filter( row => row.datetime === date || 
+                                            row.city === city ||
+                                            row.state === state ||
+                                            row.country === country ||
                                             row.shape === shape)
 
     let tbody = d3.select('tbody')
@@ -73,3 +77,18 @@ function filterData()
         })
     });
 }
+
+function init()
+{
+    let tbody = d3.select('tbody')
+    tbody.html('&nbsp;')
+    tableData.forEach(row => {
+        tbody.append('tr')
+        Object.values(row).forEach((value) =>
+        {
+            tbody.append('td').text(value)
+        })
+    });    
+}
+
+init();
