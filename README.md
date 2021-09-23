@@ -6,4 +6,4 @@ The project contains 2 folders. First one contains an html page with a simple fi
 
 The filters and results look as following.<br>
 ![Mars Image 1](Screenshots/UFO-1.png "Webpage screenshot")
-![Mars Image 2](Screenshots/UFO-2.png "Webpage screenshot")
+![Mars Image 2](Screenshots/UFO-3.png "Webpage screenshot")
