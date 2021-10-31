@@ -1,4 +1,4 @@
-# javascript-challenge
+# UFO Sightings Search
 This is a project to filter data dynamically based on the search criteria selected in the web page.
 It adds rows of data to the webpage table after filtering it from the given dataset.<br>
 
